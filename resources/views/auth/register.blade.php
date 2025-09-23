@@ -85,6 +85,7 @@
                     icon.classList.remove("bi-eye-slash");
                     icon.classList.add("bi-eye");
                 }
+                
             }
         </script>
 </body>
