@@ -11,7 +11,7 @@ class Product extends Model
 
     protected $primaryKey = 'product_id';
 
-    protected $fillable = ['nama', 'deskripsi', 'harga', 'category', 'photo'];
+    protected $fillable = ['nama', 'deskripsi', 'harga', 'photo'];
 
     // Satu produk bisa terdapat di banyak keranjang belanja
     public function carts(){
