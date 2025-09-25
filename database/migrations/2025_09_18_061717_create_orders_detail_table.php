@@ -21,6 +21,8 @@ return new class extends Migration
             $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
 
             $table->integer('jumlah');
+            
+            $table->integer('harga');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('orders_detail');
+        Schema::dropIfExists('orders_details');
     }
 };
