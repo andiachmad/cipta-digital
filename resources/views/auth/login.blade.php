@@ -21,7 +21,7 @@
             <!-- Isi form -->
             <div class="form-content">
                 <h2>Sign In</h2>
-                <form method="POST" action="#">
+                <form method="POST" action="{{ route('auth.login.post') }}">
                     @csrf
                     <label for="email">E-mail</label>
                     <input type="email" name="email" placeholder="example@gmail.com" required>
