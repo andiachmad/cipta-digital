@@ -81,6 +81,7 @@
                     icon.classList.remove("bi-eye");
                     icon.classList.add("bi-eye-slash");
                 } else {
+                    // trigger push
                     passwordField.type = "password";
                     icon.classList.remove("bi-eye-slash");
                     icon.classList.add("bi-eye");
