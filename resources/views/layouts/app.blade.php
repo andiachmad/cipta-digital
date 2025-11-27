@@ -1,11 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Navbar, Header, footer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>@yield('title', 'Cipta Digital')</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    <!-- Page-specific CSS -->
+    @stack('styles')
 </head>
+
 <body>
-    
+    {{-- Navbar --}}
+    @include('partials.navbar')
+
+    {{-- Main content --}}
+    <main>
+        @yield('content')
+    </main>
+
+    {{-- Footer --}}
+    @include('partials.footer')
+
+    <!-- Global JS -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    <!-- Page-specific JS -->
+    @stack('scripts')
 </body>
+
 </html>
