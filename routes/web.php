@@ -46,3 +46,9 @@ Route::prefix('homepage')->group(function(){
     })->name('homepage.cart');
 });
 
+/* Admin Dashboard */
+Route::get('/admin', function () {
+    return view('admin.admin');
+})->name('admin.dashboard');
+
+
