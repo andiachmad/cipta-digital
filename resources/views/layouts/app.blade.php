@@ -17,7 +17,6 @@
     <!-- Page-specific CSS -->
     @stack('styles')
     
-    {{-- TAMBAHKAN INI: Link CSS Homepage --}}
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
     
     {{-- Font Google (Opsional) --}}
