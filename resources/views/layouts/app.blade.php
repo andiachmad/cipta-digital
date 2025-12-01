@@ -16,6 +16,12 @@
 
     <!-- Page-specific CSS -->
     @stack('styles')
+    
+    {{-- TAMBAHKAN INI: Link CSS Homepage --}}
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+    
+    {{-- Font Google (Opsional) --}}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
