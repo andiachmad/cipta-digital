@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Page-specific CSS -->
+    <!-- Page-specific CSS -->
     @stack('styles')
     
-    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
+    <!-- Shared Navbar CSS -->
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     
     {{-- Font Google (Opsional) --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">

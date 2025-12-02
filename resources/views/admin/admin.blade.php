@@ -23,7 +23,6 @@
         <ul>
             <li id="nav-dashboard" class="active" onclick="showDashboard()"><i class="fas fa-chart-line"></i><span>Dashboard</span></li>
             <li id="nav-users" onclick="showUsers()"><i class="fas fa-users"></i><span>User Management</span></li>
-            <li id="nav-payments" onclick="showPayments()"><i class="fas fa-file-invoice-dollar"></i><span>Status Pembayaran</span></li>
             <li onclick="logout()"><i class="fas fa-sign-out-alt"></i><span>Logout</span></li>
         </ul>
     </div>

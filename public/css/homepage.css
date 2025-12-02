@@ -9,60 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation */
-nav {
-    background: #2563eb;
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    height: 60px;       /* batas tinggi navbar */
-    display: flex;
-    align-items: center;
-    overflow: visible;  /* biar logo bisa keluar sedikit */
-}
-
-.logo img {
-    height: 60px;       /* ukuran real */
-    transform: scale(3.6); /* logo jadi 2x lebih besar */
-    transform-origin: left center; /* membesarnya ke samping */
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
-}
-
-.login-btn {
-    background: #fbbf24;
-    color: #1e3a8a;
-    padding: 0.6rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: transform 0.3s;
-}
-
-.login-btn:hover {
-    transform: translateY(-2px);
-}
+/* Navigation styles moved to navbar.css */
 
 /* Hero Section */
 .hero {

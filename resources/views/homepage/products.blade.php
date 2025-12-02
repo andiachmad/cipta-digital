@@ -64,26 +64,23 @@
         </div>
 
         <div class="services-grid">
+            @foreach($products as $product)
             <div class="service-card">
-                <h3 class="service-title">Website Development Service</h3>
-                <p class="service-desc">Harga Terjangkau, Produk Aman dan Bisnis Lancar</p>
-                <p class="service-price">Mulai Dari <span>Rp 2.500.000</span></p>
-                <button class="btn-order" onclick="handleOrder('Website Development Service')">Order Now</button>
+                @if($product->photo)
+                    <img src="{{ asset($product->photo) }}" alt="{{ $product->nama }}" style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
+                @endif
+                <h3 class="service-title">{{ $product->nama }}</h3>
+                <p class="service-desc">{{ Str::limit($product->deskripsi, 100) }}</p>
+                <p class="service-price">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>
+                
+                <form action="{{ route('cart.store') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->product_id }}">
+                    <input type="hidden" name="jumlah" value="1">
+                    <button type="submit" class="btn-order">Add to Cart</button>
+                </form>
             </div>
-
-            <div class="service-card">
-                <h3 class="service-title">Search Engine Optimization</h3>
-                <p class="service-desc">Harga Terjangkau, Produk Aman dan Bisnis Lancar</p>
-                <p class="service-price">Mulai Dari <span>Rp 2.500.000</span></p>
-                <button class="btn-order" onclick="handleOrder('Search Engine Optimization')">Order Now</button>
-            </div>
-
-            <div class="service-card">
-                <h3 class="service-title">Digital Marketing</h3>
-                <p class="service-desc">Harga Terjangkau, Produk Aman dan Bisnis Lancar</p>
-                <p class="service-price">Mulai Dari <span>Rp 2.500.000</span></p>
-                <button class="btn-order" onclick="handleOrder('Digital Marketing')">Order Now</button>
-            </div>
+            @endforeach
         </div>
     </section>
 

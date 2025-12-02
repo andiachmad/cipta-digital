@@ -19,7 +19,7 @@ class Cart extends Model
     }
 
     // Setiap cart hanya berisi satu produk (dengan jumlah tertentu)
-    public function Product(){
+    public function product(){
         return $this->belongsTo(Product::class, 'product_id');
     }
 }

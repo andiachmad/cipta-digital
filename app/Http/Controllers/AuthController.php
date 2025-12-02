@@ -48,6 +48,12 @@ class AuthController extends Controller
         // Coba login
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            
+            // Redirect based on role
+            if (Auth::user()->role === 'admin') {
+                return redirect()->route('admin.dashboard');
+            }
+            
             return redirect()->intended('/');
         }
 

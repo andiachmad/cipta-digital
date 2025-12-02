@@ -11,7 +11,7 @@ class Order extends Model
     
     protected $primaryKey = 'order_id';
 
-    protected $fillable = ['user_id', 'total_harga'];
+    protected $fillable = ['user_id', 'total_harga', 'status'];
 
     // Setiap user bisa melakukan transaksi sebanyak mungkin
     public function user(){

@@ -1,0 +1,131 @@
+/* Navbar Styles from Product Page (The "Good" Navbar) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e56a0;
+    padding: 0 60px;
+    min-height: 80px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    height: 100%;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+}
+
+nav .logo img,
+.logo-header img {
+    display: block;
+    max-height: 250px;
+    height: auto;
+    width: auto;
+    margin-top: -85px;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: -100px;
+}
+
+nav .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav .menu a:hover {
+    text-decoration: underline;
+}
+
+nav .login {
+    background: #fbc531;
+    color: #222;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav .login:hover {
+    background: #e1b12c;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.mobile-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    nav {
+        padding: 15px 30px;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    nav .menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: #1e56a0;
+        flex-direction: column;
+        padding: 30px;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        margin-top: 0; /* Reset margin for mobile */
+    }
+
+    nav .menu.active {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+        min-height: 60px;
+    }
+
+    nav .logo img,
+    .logo-header img {
+        max-height: 46px;
+        margin-top: 0; /* Reset margin for mobile */
+    }
+
+    nav .menu {
+        gap: 18px;
+    }
+}
