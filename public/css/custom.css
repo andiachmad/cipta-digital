@@ -1,0 +1,96 @@
+/* Custom Styles for Cipta Digital - Software Agency */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Customizations */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand img {
+    height: 60px;
+    /* Large Logo */
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    position: relative;
+    padding-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+    /* Bootstrap Primary Blue */
+}
+
+/* Hover Animation (Underline from center) */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 50%;
+    background-color: #0d6efd;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.btn-primary {
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* Footer Customizations */
+footer {
+    background-color: #0b1c3c;
+    /* Dark Blue */
+    color: white;
+}
+
+.footer-logo {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #0d6efd;
+    color: white;
+    transform: translateY(-3px);
+}

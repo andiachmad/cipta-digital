@@ -1,14 +1,17 @@
-/* Navbar Styles from Product Page (The "Good" Navbar) */
+/* Navbar Styles optimized */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1e56a0;
-    padding: 0 60px;
-    min-height: 80px;
+    padding: 0 40px;
+    /* Reduced vertical padding */
+    height: 70px;
+    /* Fixed height for consistency */
     box-sizing: border-box;
     position: relative;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav .logo {
@@ -32,17 +35,17 @@ nav .logo {
 nav .logo img,
 .logo-header img {
     display: block;
-    max-height: 250px;
-    height: auto;
+    height: 50px;
+    /* Proper height */
     width: auto;
-    margin-top: -85px;
+    /* Removed negative margins */
 }
 
 nav .menu {
     display: flex;
     align-items: center;
     gap: 25px;
-    margin-top: -100px;
+    /* Removed negative margin */
 }
 
 nav .menu a {
@@ -88,7 +91,7 @@ nav .login:hover {
 /* Responsive */
 @media (max-width: 968px) {
     nav {
-        padding: 15px 30px;
+        padding: 0 20px;
     }
 
     .mobile-toggle {
@@ -97,7 +100,8 @@ nav .login:hover {
 
     nav .menu {
         position: fixed;
-        top: 60px;
+        top: 70px;
+        /* Matches navbar height */
         left: -100%;
         width: 100%;
         background: #1e56a0;
@@ -105,7 +109,6 @@ nav .login:hover {
         padding: 30px;
         transition: left 0.3s ease;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        margin-top: 0; /* Reset margin for mobile */
     }
 
     nav .menu.active {
@@ -115,14 +118,18 @@ nav .login:hover {
 
 @media (max-width: 768px) {
     nav {
-        padding: 0 20px;
-        min-height: 60px;
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    nav .menu {
+        top: 60px;
     }
 
     nav .logo img,
     .logo-header img {
-        max-height: 46px;
-        margin-top: 0; /* Reset margin for mobile */
+        height: 40px;
+        /* Smaller logo for mobile */
     }
 
     nav .menu {
