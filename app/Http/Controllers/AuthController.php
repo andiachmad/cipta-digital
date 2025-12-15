@@ -9,6 +9,22 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     /**
+     * Tampilkan form login
+     */
+    public function loginForm()
+    {
+        return view('auth.login');
+    }
+
+    /**
+     * Tampilkan form register
+     */
+    public function registerForm()
+    {
+        return view('auth.register');
+    }
+
+    /**
      * Proses register user baru
      */
     public function register(Request $request)

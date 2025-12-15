@@ -7,16 +7,23 @@ use App\Models\User;
 
 class UserController extends Controller
 {
+    /**
+     * Display a listing of users for Admin.
+     */
     public function index()
     {
-        $users = User::all();
-        return response()->json($users);
+        $users = \App\Models\User::latest()->paginate(15);
+        return view('admin.users.index', compact('users'));
     }
 
+    /**
+     * Remove the specified user from storage.
+     */
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
+        $user = \App\Models\User::findOrFail($id);
         $user->delete();
-        return response()->json(['message' => 'User deleted successfully']);
+        
+        return redirect()->back()->with('success', 'User deleted successfully.');
     }
 }

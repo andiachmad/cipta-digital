@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 
 /* Public Website Pages */
 Route::get('/', [PageController::class, 'home'])->name('homepage.index');
@@ -16,7 +17,7 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 /* Auth Routes */
 Route::prefix('auth')->group(function(){
-    Route::get('/login', [AuthController::class, 'loginForm'])->name('auth.login');
+    Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
     Route::post('/login', [AuthController::class, 'login'])->name('auth.login.post');
     Route::get('/register', [AuthController::class, 'registerForm'])->name('auth.register');
     Route::post('/register', [AuthController::class, 'register'])->name('auth.register.post');
@@ -24,21 +25,26 @@ Route::prefix('auth')->group(function(){
 });
 
 /* Legacy/Admin Logic - Kept for reference or Admin Panel */
-Route::middleware(['auth'])->prefix('admin')->group(function () {
-    Route::get('/', function () {
-        if (Auth::user()->role !== 'admin') {
-            return redirect('/');
-        }
-        return view('admin.admin');
-    })->name('admin.dashboard');
+/* Admin Dashboard & Management */
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    
+    // Dashboard
+    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
 
-    Route::get('/api/orders', [OrderController::class, 'index']);
-    Route::put('/api/orders/{id}', [OrderController::class, 'update']);
-    Route::delete('/api/orders/{id}', [OrderController::class, 'destroy']);
+    // Products
+    Route::resource('products', ProductController::class);
 
-    Route::get('/api/users', [UserController::class, 'index']);
-    Route::delete('/api/users/{id}', [UserController::class, 'destroy']);
+    // Orders
+    Route::get('/orders', [OrderController::class, 'adminIndex'])->name('orders.index');
+    Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+    Route::post('/orders/{id}/status', [OrderController::class, 'updateStatus'])->name('orders.status');
+
+    // Users
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
+
+
 
 
 

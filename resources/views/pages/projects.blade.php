@@ -14,7 +14,7 @@
             <!-- Project 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 border-0 shadow-sm transition hover-up">
-                    <img src="https://cdn.dribbble.com/users/1615584/screenshots/11261391/media/e045610818276f57007727195484502d.jpg?compress=1&resize=800x600" class="card-img-top" alt="Project 1">
+                    <img src="{{ asset('images/projects/fintech_dashboard.png') }}" class="card-img-top" alt="FinTech Dashboard">
                     <div class="card-body p-4">
                         <span class="badge bg-primary mb-2">Web Application</span>
                         <h4 class="card-title fw-bold mb-2">FinTech Dashboard</h4>
@@ -27,7 +27,7 @@
             <!-- Project 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 border-0 shadow-sm transition hover-up">
-                    <img src="https://cdn.dribbble.com/users/418188/screenshots/16327668/media/2513a9686036814911f9d5113d544026.png?compress=1&resize=800x600" class="card-img-top" alt="Project 2">
+                    <img src="{{ asset('images/projects/healthtrack_pro.png') }}" class="card-img-top" alt="HealthTrack Pro">
                     <div class="card-body p-4">
                         <span class="badge bg-purple text-white mb-2" style="background-color: #6f42c1;">Mobile App</span>
                         <h4 class="card-title fw-bold mb-2">HealthTrack Pro</h4>
@@ -40,7 +40,7 @@
             <!-- Project 3 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 border-0 shadow-sm transition hover-up">
-                    <img src="https://cdn.dribbble.com/users/4859/screenshots/14601676/media/959556d11be76c52a425f1cf1d227f6b.png?compress=1&resize=800x600" class="card-img-top" alt="Project 3">
+                    <img src="{{ asset('images/projects/shoporganic.png') }}" class="card-img-top" alt="ShopOrganic">
                     <div class="card-body p-4">
                         <span class="badge bg-success mb-2">E-Commerce</span>
                         <h4 class="card-title fw-bold mb-2">ShopOrganic</h4>
@@ -52,7 +52,7 @@
              <!-- Project 4 -->
              <div class="col-md-6 col-lg-4">
                 <div class="card h-100 border-0 shadow-sm transition hover-up">
-                    <img src="https://cdn.dribbble.com/users/25514/screenshots/14878433/media/1e5826f2982d627c284718cd55681c11.png?compress=1&resize=800x600" class="card-img-top" alt="Project 4">
+                    <img src="{{ asset('images/projects/travel_agency.png') }}" class="card-img-top" alt="Travel Agency Rebrand">
                     <div class="card-body p-4">
                         <span class="badge bg-info text-dark mb-2">UI/UX Design</span>
                         <h4 class="card-title fw-bold mb-2">Travel Agency Rebrand</h4>

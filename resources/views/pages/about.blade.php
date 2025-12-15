@@ -6,10 +6,10 @@
 <!-- Header -->
 <div class="bg-dark text-white py-5 position-relative overflow-hidden">
     <div class="container position-relative z-index-1 text-center py-5">
-        <h1 class="display-4 fw-bold mb-3">About Cipta Digital</h1>
-        <p class="lead opacity-75 mx-auto" style="max-width: 600px;">We are a team of passionate developers, designers, and strategists driven by a single purpose: to build digital products that matter.</p>
+        <h1 class="display-4 fw-bold mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">About Cipta Digital</h1>
+        <p class="lead mx-auto text-white" style="max-width: 600px; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); font-weight: 500;">We are a team of passionate developers, designers, and strategists driven by a single purpose: to build digital products that matter.</p>
     </div>
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at center, #1e56a0 0%, #0b1c3c 100%); opacity: 0.8;"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at center, #0266f1ff 85%, #081d45f4 25%); opacity: 0.2;"></div>
 </div>
 
 <!-- Story & Mission -->

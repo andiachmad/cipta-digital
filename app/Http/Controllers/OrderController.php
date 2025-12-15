@@ -9,6 +9,37 @@ use Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     /**
+     * Display a listing of orders for Admin.
+     */
+    public function adminIndex()
+    {
+        $orders = \App\Models\Order::with('user')->latest()->paginate(10);
+        return view('admin.orders.index', compact('orders'));
+    }
+
+    /**
+     * Display the specified order details for Admin.
+     */
+    public function show($id)
+    {
+        $order = \App\Models\Order::with(['user', 'details.product'])->findOrFail($id);
+        return view('admin.orders.show', compact('order'));
+    }
+
+    /**
+     * Update the order status (e.g. Payment Verification).
+     */
+    public function updateStatus(Request $request, $id)
+    {
+        $order = \App\Models\Order::findOrFail($id);
+        $order->status = $request->status;
+        $order->save();
+
+        return redirect()->back()->with('success', 'Order status updated successfully.');
+    }
+
+    // API / Legacy methods below
+    /**
      * Display a listing of the resource.
      */
     public function index()

@@ -9,7 +9,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 text-white" data-aos="fade-right">
                 <h1 class="display-3 fw-bold mb-4">Transforming Ideas into <span class="text-info">Digital Reality</span></h1>
-                <p class="lead mb-5 text-white-50">We are a premium software development agency specializing in building robust websites, mobile apps, and scalable digital solutions.</p>
+                <p class="lead mb-5 text-white">We are a premium software development agency specializing in building robust websites, mobile apps, and scalable digital solutions.</p>
                 <div class="d-flex gap-3">
                     <a href="{{ route('projects.index') }}" class="btn btn-primary btn-lg px-4">View Our Work</a>
                     <a href="{{ route('contact') }}" class="btn btn-outline-light btn-lg px-4">Contact Us</a>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6 d-none d-lg-block position-relative" data-aos="fade-left">
                  <!-- You can replace this with a hero image/illustration -->
-                 <img src="{{ asset('images/hero-illustration.png') }}" alt="Software Development" class="img-fluid rounded-4 shadow-lg" style="transform: rotate(-2deg); border: 10px solid rgba(255,255,255,0.1);">
+                 <img src="{{ asset('images/hero-illustration-v2.png') }}" alt="Software Development" class="img-fluid rounded-4 shadow-lg">
             </div>
         </div>
     </div>
