@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>@yield('title', 'Cipta Digital')</title>
@@ -17,10 +16,12 @@
     <!-- Page-specific CSS -->
     <!-- Page-specific CSS -->
     @stack('styles')
-    
+
     <!-- Shared Navbar CSS -->
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    
+    <!-- Shared Footer CSS -->
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+
     {{-- Font Google (Opsional) --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>

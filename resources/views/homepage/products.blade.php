@@ -3,8 +3,8 @@
 @section('title', 'Products - Cipta Digital')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/product.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/product.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -49,7 +49,8 @@
                 <h2>We Provide You The Best Experience</h2>
                 <p>
                     We create campaigns that connect — from social media engagement to targeted advertising,
-                    our digital marketing services are designed to amplify your brand's presence and drive measurable results.
+                    our digital marketing services are designed to amplify your brand's presence and drive measurable
+                    results.
                 </p>
                 <a href="#">More Info →</a>
             </div>
@@ -65,21 +66,19 @@
 
         <div class="services-grid">
             @foreach($products as $product)
-            <div class="service-card">
-                @if($product->photo)
-                    <img src="{{ asset($product->photo) }}" alt="{{ $product->nama }}" style="width:100%; height:150px; object-fit:cover; border-radius:8px; margin-bottom:15px;">
-                @endif
-                <h3 class="service-title">{{ $product->nama }}</h3>
-                <p class="service-desc">{{ Str::limit($product->deskripsi, 100) }}</p>
-                <p class="service-price">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>
-                
-                <form action="{{ route('cart.store') }}" method="POST">
-                    @csrf
-                    <input type="hidden" name="product_id" value="{{ $product->product_id }}">
-                    <input type="hidden" name="jumlah" value="1">
-                    <button type="submit" class="btn-order">Add to Cart</button>
-                </form>
-            </div>
+                <div class="service-card">
+                    {{-- Image removed for text-focused design --}}
+                    <h3 class="service-title">{{ $product->nama }}</h3>
+                    <p class="service-desc">{{ Str::limit($product->deskripsi, 100) }}</p>
+                    <p class="service-price">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>
+
+                    <form action="{{ route('cart.store') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->product_id }}">
+                        <input type="hidden" name="jumlah" value="1">
+                        <button type="submit" class="btn-order">Add to Cart</button>
+                    </form>
+                </div>
             @endforeach
         </div>
     </section>
@@ -128,12 +127,13 @@
             </div>
             <div class="modal-footer">
                 <button class="btn-modal btn-cancel" onclick="closeModal()">Batal</button>
-                <button class="btn-modal btn-confirm" id="confirmBtn" onclick="confirmOrder()" disabled>Lanjutkan Order</button>
+                <button class="btn-modal btn-confirm" id="confirmBtn" onclick="confirmOrder()" disabled>Lanjutkan
+                    Order</button>
             </div>
         </div>
     </div>
 @endsection
 
 @push('scripts')
-<script src="{{ asset('js/product.js') }}"></script>
+    <script src="{{ asset('js/product.js') }}"></script>
 @endpush

@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
 /* Navbar Styles from Product Page (The "Good" Navbar) */
 nav {
     display: flex;
@@ -32,17 +43,17 @@ nav .logo {
 nav .logo img,
 .logo-header img {
     display: block;
-    max-height: 250px;
+    max-height: 100px;
     height: auto;
     width: auto;
-    margin-top: -85px;
+    margin-top: 0;
 }
 
 nav .menu {
     display: flex;
     align-items: center;
     gap: 25px;
-    margin-top: -100px;
+    margin-top: 0;
 }
 
 nav .menu a {
@@ -105,7 +116,8 @@ nav .login:hover {
         padding: 30px;
         transition: left 0.3s ease;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        margin-top: 0; /* Reset margin for mobile */
+        margin-top: 0;
+        /* Reset margin for mobile */
     }
 
     nav .menu.active {
@@ -122,7 +134,8 @@ nav .login:hover {
     nav .logo img,
     .logo-header img {
         max-height: 46px;
-        margin-top: 0; /* Reset margin for mobile */
+        margin-top: 0;
+        /* Reset margin for mobile */
     }
 
     nav .menu {

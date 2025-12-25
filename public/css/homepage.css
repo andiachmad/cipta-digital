@@ -18,7 +18,10 @@ body {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /* Center content */
+    gap: 20px;
+    /* Fixed gap between text and image */
     min-height: 600px;
     position: relative;
     overflow: hidden;
@@ -65,26 +68,21 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px; /* mengurangi jarak besar antara teks & gambar */
-}
+/* Valid CSS comment to replace the duplicate block */
 
 .hero-image {
-    max-width: 650px; /* sebelumnya 550 → sekarang lebih besar */
-    flex-shrink: 0;    /* mencegah gambar mengecil ketika layar lebar */
+    max-width: 800px;
+    /* sebelumnya 550 → sekarang lebih besar */
+    flex-shrink: 0;
+    /* mencegah gambar mengecil ketika layar lebar */
     animation: fadeInRight 1s, float 3s ease-in-out infinite;
-    position: relative; 
+    position: relative;
 }
 
 .hero-image img {
-    width: 170%;           /* lebih besar dari 150% */
-    max-width: none; 
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    position: relative;    /* WAJIB supaya left berfungsi */
-    right: 300px;          /* geser ke kiri */
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
 }
 
@@ -190,7 +188,8 @@ body {
 }
 
 .partner-logo {
-    font-weight: 700;  /* bold */
+    font-weight: 700;
+    /* bold */
 }
 
 .partners h2 {
@@ -330,10 +329,12 @@ body {
 }
 
 .footer-logo img {
-    height: 150px;   /* PERBESAR ukuran logo */
+    height: 150px;
+    /* PERBESAR ukuran logo */
     width: auto;
     object-fit: contain;
-    filter: none;    /* hilangkan efek putih */
+    filter: none;
+    /* hilangkan efek putih */
 }
 
 
